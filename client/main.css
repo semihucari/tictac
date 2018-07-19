@@ -1,4 +1,11 @@
 body {
   padding: 10px;
   font-family: sans-serif;
+  background-color: darkgray;
+  overflow: hidden;
+}
+
+.container-div {
+  background-color: darkgray;
+  height: 100vh;
 }
