@@ -24,7 +24,9 @@ export default class App extends Component {
         }, () => console.log(this.state))
     }
 
-    handleReset = () => {}
+    handleReset = () => {
+        this.setState({turn: 0, table: []});
+    }
 
     render() {
         const {table} = this.state;
