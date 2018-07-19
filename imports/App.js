@@ -44,32 +44,53 @@ export default class App extends Component {
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(1)}>
-                                    {table.includes(1) && <Icon
-                                        name={table.indexOf(1) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(1)
+                                        ? <Icon
+                                                name={table.indexOf(1) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                                 <Table.Cell
                                     active
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(2)}>
-                                    {table.includes(2) && <Icon
-                                        name={table.indexOf(2) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(2)
+                                        ? <Icon
+                                                name={table.indexOf(2) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                                 <Table.Cell
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(3)}>
-                                    {table.includes(3) && <Icon
-                                        name={table.indexOf(3) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(3)
+                                        ? <Icon
+                                                name={table.indexOf(3) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -78,32 +99,53 @@ export default class App extends Component {
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(4)}>
-                                    {table.includes(4) && <Icon
-                                        name={table.indexOf(4) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(4)
+                                        ? <Icon
+                                                name={table.indexOf(4) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                                 <Table.Cell
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(5)}>
-                                    {table.includes(5) && <Icon
-                                        name={table.indexOf(5) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(5)
+                                        ? <Icon
+                                                name={table.indexOf(5) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                                 <Table.Cell
                                     active
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(6)}>
-                                    {table.includes(6) && <Icon
-                                        name={table.indexOf(6) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(6)
+                                        ? <Icon
+                                                name={table.indexOf(6) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -111,32 +153,53 @@ export default class App extends Component {
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(7)}>
-                                    {table.includes(7) && <Icon
-                                        name={table.indexOf(7) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(7)
+                                        ? <Icon
+                                                name={table.indexOf(7) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                                 <Table.Cell
                                     active
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(8)}>
-                                    {table.includes(8) && <Icon
-                                        name={table.indexOf(8) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(8)
+                                        ? <Icon
+                                                name={table.indexOf(8) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                                 <Table.Cell
                                     textAlign="center"
                                     verticalAlign="middle"
                                     onClick={() => this.handleClick(9)}>
-                                    {table.includes(9) && <Icon
-                                        name={table.indexOf(9) % 2 == 0
-                                        ? "close"
-                                        : "circle outline"}
-                                        size="massive"/>}
+                                    {table.includes(9)
+                                        ? <Icon
+                                                name={table.indexOf(9) % 2 == 0
+                                                ? "close"
+                                                : "circle outline"}
+                                                size="massive"/>
+                                        : <Icon
+                                            style={{
+                                            opacity: '0'
+                                        }}
+                                            name="close"
+                                            size="massive"/>}
                                 </Table.Cell>
                             </Table.Row>
                         </Table.Body>
