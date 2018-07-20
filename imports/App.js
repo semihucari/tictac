@@ -1,35 +1,85 @@
 import React, {Component} from 'react';
-import {Icon, Table} from 'semantic-ui-react';
-import {Segment} from 'semantic-ui-react';
-import {Button} from 'semantic-ui-react';
+import {Icon, Table, Message, Segment, Button} from 'semantic-ui-react';
 
+const winningCombs = [
+    [
+        0, 1, 2
+    ],
+    [
+        3, 4, 5
+    ],
+    [
+        6, 7, 8
+    ],
+    [
+        1, 5, 9
+    ],
+    [3, 5, 7]
+];
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            turn: 0,
+            win: false,
+            scoreX: 0,
+            scoreO: 0,
             table: []
         }
     }
 
     handleClick = (id) => {
-        let {turn, table} = this.state;
+        let {table, win} = this.state;
+
+        if (!win) {
+            this.setState({
+                table: [
+                    ...table,
+                    id
+                ]
+            }, () => {
+                let score = this.checkWin();
+                const {scoreX, scoreO} = this.state;
+
+                this.setState({
+                    scoreX: score.winX + scoreX,
+                    scoreO: score.winO + scoreO
+                });
+            });
+        }
+    }
+
+    checkWin = () => {
+        let xArr = [];
+        let oArr = [];
+        const {table} = this.state;
+
+        console.log(this.state);
+        table.map(t => table.indexOf(t) % 2 === 0
+            ? xArr.push(t)
+            : oArr.push(t));
+        let winX = winningCombs.find(c => xArr.includes(c[0]) && xArr.includes(c[1]) && xArr.includes(c[2]));
+        let winO = winningCombs.find(c => oArr.includes(c[0]) && oArr.includes(c[1]) && oArr.includes(c[2]));
 
         this.setState({
-            turn: turn++,
-            table: [
-                ...table,
-                id
-            ]
-        }, () => console.log(this.state))
+            win: winX !== undefined || winO !== undefined
+        });
+
+        return {
+            winX: winX !== undefined
+                ? 1
+                : 0,
+            winO: winO !== undefined
+                ? 1
+                : 0
+        };
     }
 
     handleReset = () => {
-        this.setState({turn: 0, table: []});
+        this.setState({table: [], win: false});
     }
 
     render() {
-        const {table} = this.state;
+        const {table, scoreX, scoreO, win} = this.state;
 
         return (
             <div className="container-div">
@@ -214,15 +264,18 @@ export default class App extends Component {
                 }}>
                     <Segment.Group horizontal>
                         <Segment textAlign="center">
-                            0
+                            {scoreX}
                         </Segment>
                         <Segment textAlign="center">
                             <Button secondary onClick={this.handleReset}>Clear</Button>
                         </Segment>
                         <Segment textAlign="center">
-                            0
+                            {scoreO}
                         </Segment>
                     </Segment.Group>
+                    {win && <Segment textAlign="center" inverted>
+                        Game finished! Please clear the table
+                    </Segment>}
                 </div>
             </div>
         );
